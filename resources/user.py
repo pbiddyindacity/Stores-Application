@@ -52,4 +52,4 @@ class UserLogin(Resource):
                 'refresh_token': refresh_token
             }, 200
 
-        return {'message': 'Invalid test credentials'}, 401
+        return {'message': 'Invalid credentials'}, 401
