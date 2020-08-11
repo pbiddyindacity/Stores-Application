@@ -12,7 +12,6 @@ class UserRegister(Resource):
 
     def post(self):
         data = _user_parser.parse_args()
-        
         if UserModel.find_by_username(data['username']):
             return {"message": "A user with that username already exists"}, 400
 
@@ -54,5 +53,3 @@ class UserLogin(Resource):
             }, 200
 
         return {'message': 'Invalid credentials'}, 401
-        
-        
